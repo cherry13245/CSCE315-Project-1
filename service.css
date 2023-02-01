@@ -1,0 +1,73 @@
+body {
+	background-color: #333;
+	color: #fff;
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+
+nav {
+	background-color: #000;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	margin: 0 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+nav a:hover {
+	color: #ff2600;
+}
+
+
+.container {
+	position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.search-bar {
+	position: center;
+	width: 100%;
+	max-width: 700px;
+	background: rgba(255, 255, 255, 0.2);
+	display: flex;
+	align-items: center;
+	border-radius: 60px;
+	padding: 10px 20px;
+}
+
+.search-bar input {
+	background: transparent;
+	flex: 1;
+	border: 0;
+	outline: none;
+	padding: 24px 20px;
+	font-size: 20px;
+	color: #cac7ff;
+}
+
+::placeholder {
+	color: #cac7ff;
+}
+
+.Volunteering_Exp {
+	padding: 10px;
+	font-size: large;
+}
