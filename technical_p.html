@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="technical_p.css" />
+		<link id="mainStyleSheet" rel="stylesheet" href="styles.css" />
+		<script>
+			function toggleTheme() {
+				let theme = document
+					.getElementById("mainStyleSheet")
+					.getAttribute("href");
+				if (theme == "styles.css") {
+					document
+						.getElementById("mainStyleSheet")
+						.setAttribute("href", "styles2.css");
+				} else {
+					document
+						.getElementById("mainStyleSheet")
+						.setAttribute("href", "styles.css");
+				}
+				localStorage.setItem(
+					"style",
+					document
+						.getElementById("mainStyleSheet")
+						.getAttribute("href")
+				);
+			}
+
+			function applyStyleSheet() {
+				const sheet = localStorage.getItem("style") || "styles.css";
+				document
+					.getElementById("mainStyleSheet")
+					.setAttribute("href", sheet);
+			}
+
+			applyStyleSheet();
+		</script>
 		<title>Wireshark Project Table</title>
 	</head>
+
 	<body>
 		<nav>
 			<ul>
@@ -12,16 +44,23 @@
 				<li><a href="Qualifications.html">Qualifications</a></li>
 				<li><a href="service.html">Service</a></li>
 				<li><a href="test.html">AI Page</a></li>
+				<button onclick="toggleTheme()" type="button">
+					Toggle Style
+				</button>
 			</ul>
 		</nav>
-		<table id="wireshark-table">
+		<table id="technical-projects-table">
 			<tr>
 				<th>Project Name</th>
 				<th>Project Description</th>
 				<th>Details</th>
 			</tr>
 			<tr>
-				<td>cpduels.com</td>
+				<td>
+					<a href="https://github.com/TAMU-username/cpduels.com"
+						>cpduels.com</a
+					>
+				</td>
 				<td>A platform for competitive programming</td>
 				<td>
 					<details>
@@ -36,11 +75,24 @@
 							Implemented backend problem finding algorithms,
 							score updating, and more
 						</p>
+						<p>
+							<img
+								src="logo_dark.png"
+								width="auto"
+								height="200"
+								;
+								alt="cpduels.com thumbnail"
+							/>
+						</p>
 					</details>
 				</td>
 			</tr>
 			<tr>
-				<td>codeday.sh/ctf</td>
+				<td>
+					<a href="https://github.com/TAMU-username/codeday.sh/ctf"
+						>codeday.sh/ctf</a
+					>
+				</td>
 				<td>
 					Developed Cyber Security Challenges for Codeday’s CodeCup
 				</td>
@@ -52,16 +104,26 @@
 							CTF by CodeDay Labs showcasing SQLi, SSRF, XSS, and
 							LFI vulnerabilities
 						</p>
+						<p>
+							<img src="codecup.svg" width="200" height="auto" />
+						</p>
 					</details>
 				</td>
 			</tr>
 			<tr>
-				<td>3jurgentcare.com</td>
+				<td>
+					<a href="https://github.com/TAMU-username/3jurgentcare.com"
+						>3jurgentcare.com</a
+					>
+				</td>
 				<td>Built a simple website for an Urgent Care center</td>
 				<td>
 					<details>
 						<summary>Click for Details</summary>
 						<p>HTML/CSS, JavaScript, GitHub Pages</p>
+						<p>
+							<img src="3jU.png" width="400" height="auto" />
+						</p>
 					</details>
 				</td>
 			</tr>

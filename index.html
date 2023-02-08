@@ -2,8 +2,40 @@
 <html>
 	<head>
 		<title>Student Landing Page</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link id="mainStyleSheet" rel="stylesheet" href="styles.css" />
+		<script>
+			function toggleTheme() {
+				let theme = document
+					.getElementById("mainStyleSheet")
+					.getAttribute("href");
+				if (theme == "styles.css") {
+					document
+						.getElementById("mainStyleSheet")
+						.setAttribute("href", "styles2.css");
+				} else {
+					document
+						.getElementById("mainStyleSheet")
+						.setAttribute("href", "styles.css");
+				}
+				localStorage.setItem(
+					"style",
+					document
+						.getElementById("mainStyleSheet")
+						.getAttribute("href")
+				);
+			}
+
+			function applyStyleSheet() {
+				const sheet = localStorage.getItem("style") || "styles.css";
+				document
+					.getElementById("mainStyleSheet")
+					.setAttribute("href", sheet);
+			}
+
+			applyStyleSheet();
+		</script>
 	</head>
+
 	<body>
 		<nav>
 			<ul>
@@ -12,6 +44,9 @@
 				<li><a href="Qualifications.html">Qualifications</a></li>
 				<li><a href="service.html">Service</a></li>
 				<li><a href="test.html">AI Page</a></li>
+				<button onclick="toggleTheme()" type="button">
+					Toggle Style
+				</button>
 			</ul>
 		</nav>
 		<header>
@@ -24,7 +59,7 @@
 				a difference
 			</p>
 		</header>
-		<main>
+		<main class="containers">
 			<section id="about">
 				<h2>About Me</h2>
 				<p>
@@ -72,8 +107,18 @@
 					you'd like to collaborate on a project!
 				</p>
 				<p>Email: cherrytree1324@tamu.edu</p>
-				<p>LinkedIn: linkedin.com/in/jeffrey-li-7b64b3221/</p>
-				<p>GitHub: github.com/JelBell1324</p>
+				<p>
+					LinkedIn:
+					<a href="http://linkedin.com/in/jeffrey-li-7b64b3221/"
+						>linkedin.com/in/jeffrey-li-7b64b3221/</a
+					>
+				</p>
+				<p>
+					GitHub:
+					<a href="http://github.com/JelBell1324"
+						>github.com/JelBell1324</a
+					>
+				</p>
 			</section>
 		</main>
 		<footer>

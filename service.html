@@ -1,8 +1,40 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="service.css" />
+		<link id="mainStyleSheet" rel="stylesheet" href="styles.css" />
+		<script>
+			function toggleTheme() {
+				let theme = document
+					.getElementById("mainStyleSheet")
+					.getAttribute("href");
+				if (theme == "styles.css") {
+					document
+						.getElementById("mainStyleSheet")
+						.setAttribute("href", "styles2.css");
+				} else {
+					document
+						.getElementById("mainStyleSheet")
+						.setAttribute("href", "styles.css");
+				}
+				localStorage.setItem(
+					"style",
+					document
+						.getElementById("mainStyleSheet")
+						.getAttribute("href")
+				);
+			}
+
+			function applyStyleSheet() {
+				const sheet = localStorage.getItem("style") || "styles.css";
+				document
+					.getElementById("mainStyleSheet")
+					.setAttribute("href", sheet);
+			}
+
+			applyStyleSheet();
+		</script>
 	</head>
+
 	<body>
 		<nav>
 			<ul>
@@ -11,9 +43,12 @@
 				<li><a href="Qualifications.html">Qualifications</a></li>
 				<li><a href="service.html">Service</a></li>
 				<li><a href="test.html">AI Page</a></li>
+				<button onclick="toggleTheme()" type="button">
+					Toggle Style
+				</button>
 			</ul>
 		</nav>
-		<div class="container">
+		<div class="sql">
 			<form action="" class="search-bar">
 				<input
 					type="text"
@@ -23,16 +58,45 @@
 		</div>
 		<div class="Volunteering_Exp">
 			<p>
-				- Camp CAMP - Volunteered for 2 weeks at camp spending time with
-				children with special needs
+				-
+				<a href="https://campcamp.org/">Camp CAMP</a>
+				- Volunteered for 2 weeks at camp spending time with children
+				with special needs
 			</p>
+			<img
+				src="CAMP.png"
+				width="250"
+				height="auto"
+				alt="camp volunteer"
+			/>
 			<br />
 			<p>
-				- ASPIRE - Mentored students on how to avoid and/or quit smoking
-				or vaping through MD Anderson Cancer Center
+				-
+				<a
+					href="https://www.mdanderson.org/about-md-anderson/community-services/aspire.html"
+					>ASPIRE</a
+				>
+				- Mentored students on how to avoid and/or quit smoking or
+				vaping through MD Anderson Cancer Center
 			</p>
+			<img
+				src="MD.png"
+				width="250"
+				height="auto"
+				alt="aspire volunteer"
+			/>
 			<br />
-			<p>- The Big Event - Hope to volunteer in the Big Event sometime</p>
+			<p>
+				-
+				<a href="https://bigevent.tamu.edu/">ASPIRE</a>
+				- Hope to volunteer in the Big Event sometime
+			</p>
+			<img
+				src="BIG.png"
+				width="250"
+				height="auto"
+				alt="big event volunteer"
+			/>
 		</div>
 	</body>
 </html>

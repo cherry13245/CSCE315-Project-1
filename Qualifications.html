@@ -1,8 +1,40 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="Qualifications.css" />
+		<link id="mainStyleSheet" rel="stylesheet" href="styles.css" />
+		<script>
+			function toggleTheme() {
+				let theme = document
+					.getElementById("mainStyleSheet")
+					.getAttribute("href");
+				if (theme == "styles.css") {
+					document
+						.getElementById("mainStyleSheet")
+						.setAttribute("href", "styles2.css");
+				} else {
+					document
+						.getElementById("mainStyleSheet")
+						.setAttribute("href", "styles.css");
+				}
+				localStorage.setItem(
+					"style",
+					document
+						.getElementById("mainStyleSheet")
+						.getAttribute("href")
+				);
+			}
+
+			function applyStyleSheet() {
+				const sheet = localStorage.getItem("style") || "styles.css";
+				document
+					.getElementById("mainStyleSheet")
+					.setAttribute("href", sheet);
+			}
+
+			applyStyleSheet();
+		</script>
 	</head>
+
 	<body>
 		<nav>
 			<ul>
@@ -11,17 +43,104 @@
 				<li><a href="Qualifications.html">Qualifications</a></li>
 				<li><a href="service.html">Service</a></li>
 				<li><a href="test.html">AI Page</a></li>
+				<button onclick="toggleTheme()" type="button">
+					Toggle Style
+				</button>
 			</ul>
 		</nav>
-		<div class="skill-text">
+		<header>
+			<h1>Resume</h1>
+			<p>
+				Here is my resume in a PDF format:
+				<a
+					href="https://drive.google.com/file/d/1GnIU_8fIsiJdo5tn6jdevuc_fFgZqfYI/view?usp=sharing"
+					>Download Resume</a
+				>
+			</p>
+			<hr />
 			<h3>Technical Skills:</h3>
-			<p>- Web Development</p>
-			<p>- Database Management</p>
-			<p>- Data Analytics</p>
+			<ul>
+				<li>Web Development</li>
+				<li>Database Management</li>
+				<li>Data Analytics</li>
+				<li>Data Analytics</li>
+				<li>Docker</li>
+				<li>Linux</li>
+				<li>
+					2023 USAA Cybersecurity Intern
+					<a href="https://www.usaajobs.com/careers"
+						>https://www.usaajobs.com/careers</a
+					>
+				</li>
+				<li>
+					I'm also working on my SEC+ Online Course for my COMPTIA
+					SEC+ CERT
+					<a href="https://www.comptia.org/certifications/security"
+						>https://www.comptia.org/certifications/security</a
+					>
+				</li>
+				<li>
+					Virtual Hacking Labs Certification
+					<a href="https://www.virtualhackinglabs.com/"
+						>https://www.virtualhackinglabs.com/</a
+					>
+				</li>
+			</ul>
 			<h3>Areas of Interest:</h3>
-			<p>- Machine Learning</p>
-			<p>- Natural Language Processing</p>
-			<p>- Cybersecurity</p>
-		</div>
+			<p>I am interested in the following areas in Computer Science:</p>
+			<ul>
+				<li>Machine Learning</li>
+				<li>Natural Language Processing</li>
+				<li>Cybersecurity</li>
+			</ul>
+			<p>
+				The application of Artificial Intelligence, famously known as
+				Machine Learning, has been making its presence felt with its
+				ability to learn from data and enhance its performance
+				progressively. The potential of this rapidly expanding field is
+				tremendous. It is affecting various industries like finance,
+				healthcare and transportation, advancing so many technologies.
+				The notion of machines being able to comprehend and make
+				predictions based on data is a revolutionary concept. It will
+				possibly significantly alter the way we function in our daily
+				lives.
+			</p>
+			<p>
+				Natural Language Processing, the field that navigates the
+				communication between humans and computers through natural
+				language, has grown a lot over the past few years. This progress
+				has enabled machines to comprehend, analyze and generate human
+				language with incredible accuracy. This makes it possible for
+				users to interact with computers in a more natural and intuitive
+				manner. The integration of NLP into various applications has
+				transformed the way we interact with technology. These
+				applications include machine translation, voice assistants and
+				chatbots.
+			</p>
+			<p>
+				Cybersecurity, a critical aspect in our digital lives, has
+				become increasingly important as the world becomes increasingly
+				dependent on technology. The growing number of cyber attacks,
+				data breaches, and other security threats shows the need for
+				robust and efficient cybersecurity measures. For example there
+				was a recent breach of the popular password manager LastPass.
+				Many customers were initially informed that the breach was minor
+				and did not affect them en mass. However it was later revealed
+				that the attack was worse than expected. This leads us to the
+				use of Machine Learning algorithms to detect and prevent
+				cyberattacks. It is rapidly gaining popularity, and I am
+				intrigued to learn about how these technologies can protect our
+				digital selves from potential threats.
+			</p>
+			<p>
+				In conclusion, I am very interested the the topics of
+				Cybersecurity, Natural Language Processing, and Machine Learning
+				because they are the future. Cybersecurity is impotent since it
+				keeps bad actors from corrupting our increasingly digital world.
+				Natural Language Processing helps us communicate better with
+				machines. And finally Machine Learning which help refine and
+				tune machines to do harder and more complex tasks.
+			</p>
+		</header>
 	</body>
 </html>

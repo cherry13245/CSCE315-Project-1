@@ -2,90 +2,7 @@
 <html>
 	<head>
 		<title>Cybersecurity Site</title>
-		<style>
-			/* Add CSS styles here */
-			body {
-				background-color: #f5f5f5;
-			}
-			nav {
-				background-color: #000;
-				display: flex;
-				justify-content: center;
-				padding: 10px;
-			}
-
-			nav ul {
-				display: flex;
-				list-style: none;
-				margin: 0;
-				padding: 0;
-			}
-
-			nav li {
-				margin: 0 20px;
-			}
-
-			nav a {
-				color: #fff;
-				text-decoration: none;
-				font-size: 20px;
-				font-weight: bold;
-			}
-
-			nav a:hover {
-				color: #ff2600;
-			}
-
-			h1 {
-				text-align: center;
-				font-size: 4em;
-				margin-top: 50px;
-				color: #333;
-			}
-			.container {
-				width: 80%;
-				margin: 0 auto;
-			}
-			.card {
-				background-color: #fff;
-				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-				padding: 20px;
-				margin-top: 50px;
-			}
-			.card h2 {
-				font-size: 2em;
-				margin-bottom: 20px;
-			}
-			.card p {
-				font-size: 1.2em;
-				line-height: 1.5;
-			}
-			/* Add animations here */
-			h1 {
-				animation: fadeIn 1s ease;
-			}
-			.card {
-				animation: slideIn 1s ease;
-			}
-			@keyframes fadeIn {
-				from {
-					opacity: 0;
-				}
-				to {
-					opacity: 1;
-				}
-			}
-			@keyframes slideIn {
-				from {
-					transform: translateY(-50px);
-					opacity: 0;
-				}
-				to {
-					transform: translateY(0);
-					opacity: 1;
-				}
-			}
-		</style>
+		<link id="mainStyleSheet" rel="stylesheet" href="AI_Styles.css" />
 	</head>
 	<body>
 		<nav>
@@ -95,10 +12,23 @@
 				<li><a href="Qualifications.html">Qualifications</a></li>
 				<li><a href="service.html">Service</a></li>
 				<li><a href="test.html">AI Page</a></li>
+				<button onclick="toggleTheme()" type="button">
+					Toggle Style
+				</button>
 			</ul>
 		</nav>
 		<h1>Cybersecurity Site</h1>
 		<div class="container">
+			<div class="card">
+				<h2>
+					This Page Was Created by OPENAI's ChatGPT
+					<a href="http://chat.openai.com">http://chat.openai.com</a>
+				</h2>
+				<p>
+					Prompt: Create a page about cybersecurity and include
+					animations
+				</p>
+			</div>
 			<div class="card">
 				<h2>What is Cybersecurity?</h2>
 				<p>
